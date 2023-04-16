@@ -14,7 +14,7 @@ const server = http.createServer(function(req, res) {
                 res.writeHead(200 , { 'Content-Type' : 'text/html'})
                 res.write(data)
             }
-            res.end()
+            return res.end()
         })
     }
     else if(req.url === '/about') {
@@ -28,7 +28,7 @@ const server = http.createServer(function(req, res) {
                 res.writeHead(200 , { 'Content-Type' : 'text/html'})
                 res.write(data)
             }
-            res.end()
+            return res.end()
         })
     }
     else if(req.url === '/contact-me') {
@@ -43,7 +43,7 @@ const server = http.createServer(function(req, res) {
                 res.writeHead(200 , { 'Content-Type' : 'text/html'})
                 res.write(data)
             }
-            res.end()
+            return res.end()
         })
     }
     else {
@@ -56,7 +56,7 @@ const server = http.createServer(function(req, res) {
             else{
                 res.write(data)
             }
-            res.end()
+            return res.end()
         })
     }
 
